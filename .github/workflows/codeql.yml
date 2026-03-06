@@ -16,9 +16,12 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+    paths-ignore:
+      - '**/*.md'
+      - '**/*.txt'
   schedule:
-    - cron: '42 18 * * 4'
-
+    - cron: '1 1 * * 0'
+    #UTC is ET+5 hours
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
