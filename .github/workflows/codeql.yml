@@ -22,6 +22,7 @@ on:
   schedule:
     - cron: '1 1 * * 0'
     #UTC is ET+5 hours
+    #configured to run at 01:01, only on Sunday
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
